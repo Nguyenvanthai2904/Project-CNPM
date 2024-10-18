@@ -3,18 +3,18 @@
 
     <item
         android:id="@+id/transaction"
-        android:title="Transaction"
-        android:icon="@drawable/transaction"/>
+        android:icon="@drawable/transaction"
+        android:title="Transaction" />
     <item
         android:id="@+id/calendar"
-        android:title="Calendar"
-        android:icon="@drawable/calendar"/>
+        android:icon="@drawable/calendar"
+        android:title="Calendar" />
     <item
         android:id="@+id/chart"
-        android:title="Chart"
-        android:icon="@drawable/chart"/>
+        android:icon="@drawable/chart"
+        android:title="Chart" />
     <item
         android:id="@+id/more"
-        android:title="More"
-        android:icon="@drawable/more"/>
+        android:icon="@drawable/more"
+        android:title="More" />
 </menu>

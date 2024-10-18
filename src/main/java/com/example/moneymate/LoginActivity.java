@@ -37,39 +37,47 @@ public class LoginActivity extends AppCompatActivity {
         btn_google = findViewById(R.id.btn_google);
         tv_register = findViewById(R.id.tv_register);
 
+        // Thêm OnClickListener cho tv_register
         tv_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent_login = new Intent(LoginActivity.this, SignupActivity.class);
-                startActivity(intent_login);
+                Intent intent_signup = new Intent(LoginActivity.this, SignupActivity.class);
+                startActivity(intent_signup);
             }
         });
 
         // Thêm OnClickListener cho btn_login
+//        btn_login.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                // Giả lập quá trình xác thực (bạn có thể thay đổi theo logic của mình)
+//                String email = edt_email.getText().toString();
+//                String password = edt_password.getText().toString();
+//
+//                // Kiểm tra thông tin đăng nhập (thay thế với logic xác thực thực sự)
+//                if (email.equals("user@example.com") && password.equals("password")) {
+//                    // Khi người dùng đăng nhập thành công
+//                    SharedPreferences sharedPreferences = getSharedPreferences("MyAppPrefs", MODE_PRIVATE);
+//                    SharedPreferences.Editor editor = sharedPreferences.edit();
+//                    editor.putBoolean("isLoggedIn", true); // Lưu trạng thái đã đăng nhập
+//                    editor.putString("username", email); // Lưu tên người dùng hoặc thông tin khác (nếu cần)
+//                    editor.apply(); // Áp dụng các thay đổi
+//
+//                    // Chuyển hướng đến MainActivity
+//                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+//                    startActivity(intent);
+//                    finish(); // Đóng LoginActivity nếu không cần quay lại
+//                } else {
+//                    // Hiển thị thông báo lỗi hoặc xử lý đăng nhập không thành công
+//                    // Bạn có thể sử dụng Toast hoặc AlertDialog
+//                }
+//            }
+//        });
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Giả lập quá trình xác thực (bạn có thể thay đổi theo logic của mình)
-                String email = edt_email.getText().toString();
-                String password = edt_password.getText().toString();
-
-                // Kiểm tra thông tin đăng nhập (thay thế với logic xác thực thực sự)
-                if (email.equals("user@example.com") && password.equals("password")) {
-                    // Khi người dùng đăng nhập thành công
-                    SharedPreferences sharedPreferences = getSharedPreferences("MyAppPrefs", MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                    editor.putBoolean("isLoggedIn", true); // Lưu trạng thái đã đăng nhập
-                    editor.putString("username", email); // Lưu tên người dùng hoặc thông tin khác (nếu cần)
-                    editor.apply(); // Áp dụng các thay đổi
-
-                    // Chuyển hướng đến MainActivity
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                    startActivity(intent);
-                    finish(); // Đóng LoginActivity nếu không cần quay lại
-                } else {
-                    // Hiển thị thông báo lỗi hoặc xử lý đăng nhập không thành công
-                    // Bạn có thể sử dụng Toast hoặc AlertDialog
-                }
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
     }
